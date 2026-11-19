@@ -75,6 +75,10 @@ These are available from the authors on request.
 Some frozen run configs, version records and observer outputs contain local absolute paths to model weights (an
 operating-system user directory). They were left unedited because observer-output hashes appear in the paper's tables.
 
+## Sanitized files
+
+In 27 data files the local home-directory path was replaced by `/Users/admin`; original and published SHA-256 are listed in `SANITIZED-HASHES.md`. No freeze manifest covers these files and no reported number changes.
+
 ## License
 
 Code: MIT (`LICENSE`). Data and documentation: CC BY 4.0 (`LICENSE-DATA`).

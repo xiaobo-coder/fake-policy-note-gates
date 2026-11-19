@@ -2,7 +2,7 @@
 """Recompute every macro and table file the paper inputs from the shipped frozen outputs and compare with expected/.
 Standard library only.
   python3 reproduce_tables.py      -> writes out/, prints MATCH/MISMATCH per file, exit 0 iff all match.
-Macro files are compared by definition (\\newcommand name -> value); table/figure/example files by exact text.
+Macro files are compared by definition (\\newcommand name -> value); table/figure/example files by exact text, ignoring LaTeX comment lines (they record source-file hashes; see SANITIZED-HASHES.md).
 Model runs and observers are NOT repeated; the rendering tools read the frozen observer outputs and test runs in
 study-v1.0/ and v1.1/ ... v1.4/. To re-run the observers themselves, see README."""
 import json, os, re, shutil, subprocess, sys
@@ -55,7 +55,8 @@ for d, _, fs in sorted(os.walk(E)):
             print(('MATCH   ' if not bad else 'MISMATCH'), rel, '(%d macros)' % len(e) + note,
                   '' if not bad else 'e.g. %s: expected %s got %s' % (bad[0], e.get(bad[0]), o.get(bad[0])))
         else:
-            bad = open(e_p, 'rb').read() != open(o_p, 'rb').read()
-            print(('MATCH   ' if not bad else 'MISMATCH'), rel, '(exact text)')
+            body = lambda q: [l for l in open(q, encoding='utf-8').read().splitlines() if not l.lstrip().startswith('%')]
+            bad = body(e_p) != body(o_p)
+            print(('MATCH   ' if not bad else 'MISMATCH'), rel, '(exact text; %-comment lines with source hashes ignored, see SANITIZED-HASHES.md)')
         ok &= not bad
 print('RESULT:', 'ALL MATCH' if ok else 'MISMATCH'); sys.exit(0 if ok else 1)
