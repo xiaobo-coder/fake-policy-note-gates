@@ -1,0 +1,8 @@
+{
+ "schema": "p923-dataset-v2",
+ "split": "test",
+ "pairs": 4,
+ "items": 160,
+ "sha256": "c6364b11f6de4e98fd160e137f5aa04441ccd721cd28f76474c7b9d41a1c3679",
+ "createdAt": "2026-11-11T18:52:00.142Z"
+}

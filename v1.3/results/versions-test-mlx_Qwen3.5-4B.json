@@ -1,0 +1,17 @@
+{
+ "model": "mlx:/Users/admin/Documents/hf-models/Qwen3.5-4B",
+ "v11Run": "../v1.1/results/test-mlx_Qwen3.5-4B-001",
+ "v11Model": "mlx:/Users/admin/Documents/hf-models/Qwen3.5-4B",
+ "v11StartedAt": "2026-11-15T22:15:51.442Z",
+ "v11OllamaVersion": "0.40.16",
+ "recordedAt": "2026-11-17T11:58:38.430522",
+ "server": "mlx-bridge",
+ "serverVersion": "0.32.4 0.32.2",
+ "modelFile": {
+  "path": "/Users/admin/Documents/hf-models/Qwen3.5-4B/model.safetensors-00001-of-00002.safetensors",
+  "mtime": "2026-11-08T11:52:40.072269",
+  "sha256": null,
+  "olderThanV11Start": true
+ },
+ "versionMatchesV11": null
+}

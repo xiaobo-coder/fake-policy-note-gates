@@ -1,0 +1,20 @@
+{
+ "schema": "p923-run-v1.2",
+ "model": "openai/gpt-oss-20b",
+ "conds": [
+  "J2",
+  "J2b"
+ ],
+ "runtime": {
+  "server": "lmstudio",
+  "requestExtras": {
+   "reasoning_effort": "low"
+  }
+ },
+ "maxTokens": 4096,
+ "datasetSha256": "c128c5704826086e86f2fb0bef5310d98b39a2697537aca9ad52b95a0d37c255",
+ "split": "f11",
+ "sourceSha256": "673ebbaf088ffd4aea10bcd0c9de0d704c0e96a12f9704bd2c87a40686cd0e7c",
+ "startedAt": "2026-11-17T08:38:55.037Z",
+ "freeze": "freeze-v1.2"
+}

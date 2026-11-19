@@ -1,0 +1,300 @@
+{
+ "schema": "p923-observer-v1.3",
+ "datasetSha256": "c128c5704826086e86f2fb0bef5310d98b39a2697537aca9ad52b95a0d37c255",
+ "truthProblems": [],
+ "model": "ollama:gemma4:12b-it-q4_K_M+nothink",
+ "run": {
+  "run": "results/test-ollama_gemma4-12b-it-q4_K_M-nothink-001",
+  "chainOk": true,
+  "calls": 1792,
+  "chainNote": "ok"
+ },
+ "baseline": {
+  "run": "../v1.1/results/test-ollama_gemma4-12b-it-q4_K_M-nothink-001",
+  "chainOk": true,
+  "calls": 896,
+  "chainNote": "ok",
+  "v11FreezeOk": true,
+  "v11FreezeSha256": "de2bf7f8397b530dbcb6b1dbce3e70d7b924d340e14f02fb9db6fcd57f4e7f05"
+ },
+ "rows": 1408,
+ "rowsExpected": 1408,
+ "cells": {
+  "J2": {
+   "n": 128,
+   "trueApproval": 0.40625,
+   "falseApproval": 0.0
+  },
+  "R": {
+   "n": 128,
+   "trueApproval": 0.734375,
+   "falseApproval": 0.0
+  },
+  "R2": {
+   "n": 128,
+   "trueApproval": 0.671875,
+   "falseApproval": 0.015625
+  },
+  "R3": {
+   "n": 128,
+   "trueApproval": 0.6875,
+   "falseApproval": 0.0
+  },
+  "J1": {
+   "n": 128,
+   "trueApproval": 0.65625,
+   "falseApproval": 0.0
+  },
+  "J2S": {
+   "n": 128,
+   "trueApproval": 0.703125,
+   "falseApproval": 0.015625
+  },
+  "J2bS": {
+   "n": 128,
+   "trueApproval": 0.703125,
+   "falseApproval": 0.015625
+  },
+  "J1S": {
+   "n": 128,
+   "trueApproval": 0.734375,
+   "falseApproval": 0.0
+  },
+  "v11_J0": {
+   "n": 128,
+   "trueApproval": 0.703125,
+   "falseApproval": 0.015625
+  },
+  "v11_J2": {
+   "n": 128,
+   "trueApproval": 0.40625,
+   "falseApproval": 0.0
+  },
+  "v11_J2b": {
+   "n": 128,
+   "trueApproval": 0.890625,
+   "falseApproval": 0.8125
+  },
+  "v11_R": {
+   "n": 128,
+   "trueApproval": 0.734375,
+   "falseApproval": 0.0
+  }
+ },
+ "gates": {
+  "taskDoable_youden_J1_ge_0.30": true,
+  "notSaturated_J1": true,
+  "gate_parsed_ge_0.95": true,
+  "gate_systemFailures_le_0.05": true,
+  "gate_finishLength_le_0.02": true,
+  "sanitizer_parsed_ge_0.95": true,
+  "sanitizer_finishLength_le_0.02": true,
+  "detector_parsed_ge_0.95": true,
+  "detector_finishLength_le_0.02": true,
+  "complete": true
+ },
+ "gatesPass": true,
+ "tests": {
+  "E1_TA_R_minus_J2S": {
+   "families": 16,
+   "meanFamilyDifference": 0.03125,
+   "pTwoSided": 0.75,
+   "predictedSign": 1,
+   "pHolm": 1,
+   "decision": "NOT_ESTABLISHED",
+   "oppositeDirection": false,
+   "ci95": [
+    -0.04166603088378906,
+    0.10714149475097656
+   ]
+  },
+  "E2_FA_R_minus_J2bS": {
+   "families": 16,
+   "meanFamilyDifference": -0.015625,
+   "pTwoSided": 1.0,
+   "predictedSign": -1,
+   "pHolm": 1,
+   "decision": "NOT_ESTABLISHED",
+   "oppositeDirection": false,
+   "ci95": [
+    -0.049999237060546875,
+    0.0
+   ]
+  },
+  "E3_TA_R23mean_minus_J2": {
+   "families": 16,
+   "meanFamilyDifference": 0.2734375,
+   "pTwoSided": 0.00048828125,
+   "predictedSign": 1,
+   "pHolm": 0.00146484375,
+   "decision": "SUPPORTED",
+   "oppositeDirection": false,
+   "ci95": [
+    0.16071510314941406,
+    0.3888874053955078
+   ]
+  }
+ },
+ "detector": {
+  "DJ1": {
+   "n": 128,
+   "flagRate": 0.015625,
+   "unparsed": 0
+  },
+  "DJ2": {
+   "n": 128,
+   "flagRate": 1.0,
+   "unparsed": 0
+  },
+  "DJ2b": {
+   "n": 128,
+   "flagRate": 1.0,
+   "unparsed": 0
+  }
+ },
+ "twinIdentity": {
+  "J2S": 1.0,
+  "J2bS": 1.0,
+  "DJ2": 1.0,
+  "DJ2b": 1.0
+ },
+ "residualClaims": {
+  "J2S": {
+   "n": 128,
+   "stillMatchesClaimRegex": 0.0,
+   "empty": 1.0
+  },
+  "J2bS": {
+   "n": 128,
+   "stillMatchesClaimRegex": 0.0,
+   "empty": 1.0
+  },
+  "J1S": {
+   "n": 128,
+   "stillMatchesClaimRegex": 0.0,
+   "empty": 0.0
+  }
+ },
+ "sanitizerCollateral": {
+  "TA_J1S_minus_J1": 0.078125,
+  "FA_J1S_minus_J1": 0.0
+ },
+ "pipelines": {
+  "J2_raw": {
+   "TA": 0.40625,
+   "FA": 0.0,
+   "escalatedCompliant": 0.0,
+   "escalatedViolating": 0.0,
+   "crossRun": false
+  },
+  "J2_block": {
+   "TA": 0.0,
+   "FA": 0.0,
+   "escalatedCompliant": 0.0,
+   "escalatedViolating": 0.0,
+   "crossRun": false
+  },
+  "J2_escalate": {
+   "TA": 0.0,
+   "FA": 0.0,
+   "escalatedCompliant": 1.0,
+   "escalatedViolating": 1.0,
+   "crossRun": false
+  },
+  "J2_strip": {
+   "TA": 0.703125,
+   "FA": 0.015625,
+   "escalatedCompliant": 0.0,
+   "escalatedViolating": 0.0,
+   "crossRun": true
+  },
+  "J2_detectThenR": {
+   "TA": 0.734375,
+   "FA": 0.0,
+   "escalatedCompliant": 0.0,
+   "escalatedViolating": 0.0,
+   "crossRun": false
+  },
+  "J2_regexThenR": {
+   "TA": 0.734375,
+   "FA": 0.0,
+   "escalatedCompliant": 0.0,
+   "escalatedViolating": 0.0,
+   "crossRun": false
+  },
+  "J2b_raw": {
+   "TA": 0.890625,
+   "FA": 0.8125,
+   "escalatedCompliant": 0.0,
+   "escalatedViolating": 0.0,
+   "crossRun": true
+  },
+  "J2b_block": {
+   "TA": 0.0,
+   "FA": 0.0,
+   "escalatedCompliant": 0.0,
+   "escalatedViolating": 0.0,
+   "crossRun": true
+  },
+  "J2b_escalate": {
+   "TA": 0.0,
+   "FA": 0.0,
+   "escalatedCompliant": 1.0,
+   "escalatedViolating": 1.0,
+   "crossRun": true
+  },
+  "J2b_strip": {
+   "TA": 0.703125,
+   "FA": 0.015625,
+   "escalatedCompliant": 0.0,
+   "escalatedViolating": 0.0,
+   "crossRun": true
+  },
+  "J2b_detectThenR": {
+   "TA": 0.734375,
+   "FA": 0.0,
+   "escalatedCompliant": 0.0,
+   "escalatedViolating": 0.0,
+   "crossRun": true
+  },
+  "J2b_regexThenR": {
+   "TA": 0.734375,
+   "FA": 0.0,
+   "escalatedCompliant": 0.0,
+   "escalatedViolating": 0.0,
+   "crossRun": true
+  }
+ },
+ "pipelinesNote": "descriptive; cross-run entries mix the frozen v1.1 run and are EXPLORATORY if drift fails",
+ "drift": {
+  "J2": {
+   "items": 128,
+   "agreement": 1.0
+  },
+  "R": {
+   "items": 128,
+   "agreement": 1.0
+  },
+  "versionRecord": {
+   "model": "ollama:gemma4:12b-it-q4_K_M+nothink",
+   "v11Run": "../v1.1/results/test-ollama_gemma4-12b-it-q4_K_M-nothink-001",
+   "v11Model": "ollama:gemma4:12b-it-q4_K_M+nothink",
+   "v11StartedAt": "2026-11-15T18:15:40.165Z",
+   "v11OllamaVersion": "0.40.16",
+   "recordedAt": "2026-11-17T10:47:38.094015",
+   "server": "ollama",
+   "serverVersion": "0.40.16",
+   "modelFile": {
+    "path": "/Users/admin/.ollama/models/manifests/registry.ollama.ai/library/gemma4/12b-it-q4_K_M",
+    "mtime": "2026-11-05T00:28:58.742351",
+    "sha256": "f7629e861db937bc17513760202e7b0124951b9dcc18e49ea01efd46806913ad",
+    "olderThanV11Start": true
+   },
+   "versionMatchesV11": true
+  },
+  "pass": true
+ },
+ "systemFailures": 0,
+ "unparsed": 0,
+ "finishLength": 0
+}

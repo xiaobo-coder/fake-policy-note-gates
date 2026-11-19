@@ -1,0 +1,17 @@
+{
+ "model": "ollama:qwen3:8b+nothink",
+ "v11Run": "../v1.1/results/test-ollama_qwen3-8b-nothink-001",
+ "v11Model": "ollama:qwen3:8b+nothink",
+ "v11StartedAt": "2026-11-15T18:58:04.972Z",
+ "v11OllamaVersion": "0.40.16",
+ "recordedAt": "2026-11-17T08:30:15.814889",
+ "server": "ollama",
+ "serverVersion": "0.40.16",
+ "modelFile": {
+  "path": "/Users/admin/.ollama/models/manifests/registry.ollama.ai/library/qwen3/8b",
+  "mtime": "2026-11-09T10:07:17.642503",
+  "sha256": "b3d9ba7c899cfd112df2574c6a91458a70b724c5e4e50dfffd75574b2d1648e7",
+  "olderThanV11Start": true
+ },
+ "versionMatchesV11": true
+}

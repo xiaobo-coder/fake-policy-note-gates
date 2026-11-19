@@ -1,0 +1,970 @@
+{
+ "schema": "p923-observer-v1",
+ "datasetSha256": "c6364b11f6de4e98fd160e137f5aa04441ccd721cd28f76474c7b9d41a1c3679",
+ "truthProblems": [],
+ "runs": [
+  {
+   "run": "results/test-codex-luna-001",
+   "model": "codex:openai.gpt-5.6-luna:high",
+   "chainOk": true,
+   "calls": 960,
+   "chainNote": "ok",
+   "datasetBound": true,
+   "decisions": 960,
+   "analysis": {
+    "cells": {
+     "J0-Fother": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.96875,
+      "youden": 0.96875,
+      "agreementBias": -0.015625
+     },
+     "J0-Fself": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.96875,
+      "youden": 0.96875,
+      "agreementBias": -0.015625
+     },
+     "J1-Fother": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.96875,
+      "youden": 0.96875,
+      "agreementBias": -0.015625
+     },
+     "J1-Fself": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.96875,
+      "youden": 0.96875,
+      "agreementBias": -0.015625
+     },
+     "J2-Fother": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.921875,
+      "youden": 0.921875,
+      "agreementBias": -0.0390625
+     },
+     "J2-Fself": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.9375,
+      "youden": 0.9375,
+      "agreementBias": -0.03125
+     }
+    },
+    "tests": {
+     "H1_falseApproval_J2_minus_J0_Fother": {
+      "families": 16,
+      "meanFamilyDifference": 0.0,
+      "pTwoSided": 1.0,
+      "pHolm": 1
+     },
+     "H2_falseApproval_Fself_minus_Fother_J0": {
+      "families": 16,
+      "meanFamilyDifference": 0.0,
+      "pTwoSided": 1.0,
+      "pHolm": 1
+     },
+     "H3_youden_J1_minus_J0_Fother": {
+      "families": 16,
+      "meanFamilyDifference": 0.0,
+      "pTwoSided": 1.0,
+      "pHolm": 1
+     }
+    },
+    "gates": {
+     "taskDoable_youden_J0Fother_ge_0.30": {
+      "value": 0.96875,
+      "pass": true
+     },
+     "notSaturated_FA_J0Fother_le_0.95_and_TA_ge_0.05": {
+      "value": [
+       0.0,
+       0.96875
+      ],
+      "pass": true
+     },
+     "systemFailures_le_0.05": {
+      "value": 0.0,
+      "pass": true
+     },
+     "parsed_ge_0.95": {
+      "value": 1.0,
+      "pass": true
+     },
+     "finishLength_le_0.02": {
+      "value": 0.0,
+      "pass": true
+     }
+    },
+    "holdoutFalseApproval": {
+     "J0-Fother": 0.0,
+     "J2-Fother": 0.0
+    },
+    "systemFailures": 0,
+    "unparsed": 0,
+    "finishLength": 0
+   }
+  },
+  {
+   "run": "results/test-qwen_qwen3.6-35b-a3b-001",
+   "model": "qwen/qwen3.6-35b-a3b",
+   "chainOk": true,
+   "calls": 960,
+   "chainNote": "ok",
+   "datasetBound": true,
+   "decisions": 960,
+   "analysis": {
+    "cells": {
+     "J0-Fother": {
+      "n": 118,
+      "falseApproval": 0.017543859649122806,
+      "trueApproval": 0.9672131147540983,
+      "youden": 0.9496692551049755,
+      "agreementBias": -0.007621512798389407
+     },
+     "J0-Fself": {
+      "n": 109,
+      "falseApproval": 0.02040816326530612,
+      "trueApproval": 1.0,
+      "youden": 0.9795918367346939,
+      "agreementBias": 0.010204081632653073
+     },
+     "J1-Fother": {
+      "n": 116,
+      "falseApproval": 0.0,
+      "trueApproval": 0.9833333333333333,
+      "youden": 0.9833333333333333,
+      "agreementBias": -0.00833333333333336
+     },
+     "J1-Fself": {
+      "n": 117,
+      "falseApproval": 0.03636363636363636,
+      "trueApproval": 0.9838709677419355,
+      "youden": 0.9475073313782991,
+      "agreementBias": 0.010117302052785937
+     },
+     "J2-Fother": {
+      "n": 84,
+      "falseApproval": 0.05,
+      "trueApproval": 0.8863636363636364,
+      "youden": 0.8363636363636363,
+      "agreementBias": -0.0318181818181818
+     },
+     "J2-Fself": {
+      "n": 83,
+      "falseApproval": 0.027777777777777776,
+      "trueApproval": 0.9148936170212766,
+      "youden": 0.8871158392434988,
+      "agreementBias": -0.028664302600472813
+     }
+    },
+    "tests": {
+     "H1_falseApproval_J2_minus_J0_Fother": {
+      "families": 16,
+      "meanFamilyDifference": 0.03645833333333333,
+      "pTwoSided": 0.5,
+      "pHolm": 1
+     },
+     "H2_falseApproval_Fself_minus_Fother_J0": {
+      "families": 16,
+      "meanFamilyDifference": 0.0,
+      "pTwoSided": 1.0,
+      "pHolm": 1
+     },
+     "H3_youden_J1_minus_J0_Fother": {
+      "families": 16,
+      "meanFamilyDifference": 0.03125,
+      "pTwoSided": 1.0,
+      "pHolm": 1
+     }
+    },
+    "gates": {
+     "taskDoable_youden_J0Fother_ge_0.30": {
+      "value": 0.9496692551049755,
+      "pass": true
+     },
+     "notSaturated_FA_J0Fother_le_0.95_and_TA_ge_0.05": {
+      "value": [
+       0.017543859649122806,
+       0.9672131147540983
+      ],
+      "pass": true
+     },
+     "systemFailures_le_0.05": {
+      "value": 0.17291666666666666,
+      "pass": false
+     },
+     "parsed_ge_0.95": {
+      "value": 0.8270833333333334,
+      "pass": false
+     },
+     "finishLength_le_0.02": {
+      "value": 0.0,
+      "pass": true
+     }
+    },
+    "holdoutFalseApproval": {
+     "J0-Fother": 0.1875,
+     "J2-Fother": 0.125
+    },
+    "systemFailures": 166,
+    "unparsed": 166,
+    "finishLength": 0
+   }
+  },
+  {
+   "run": "results/test-openai_gpt-oss-20b-001",
+   "model": "openai/gpt-oss-20b",
+   "chainOk": true,
+   "calls": 960,
+   "chainNote": "ok",
+   "datasetBound": true,
+   "decisions": 960,
+   "analysis": {
+    "cells": {
+     "J0-Fother": {
+      "n": 128,
+      "falseApproval": 0.015625,
+      "trueApproval": 0.9375,
+      "youden": 0.921875,
+      "agreementBias": -0.0234375
+     },
+     "J0-Fself": {
+      "n": 128,
+      "falseApproval": 0.015625,
+      "trueApproval": 0.9375,
+      "youden": 0.921875,
+      "agreementBias": -0.0234375
+     },
+     "J1-Fother": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.9375,
+      "youden": 0.9375,
+      "agreementBias": -0.03125
+     },
+     "J1-Fself": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.953125,
+      "youden": 0.953125,
+      "agreementBias": -0.0234375
+     },
+     "J2-Fother": {
+      "n": 128,
+      "falseApproval": 0.03125,
+      "trueApproval": 0.828125,
+      "youden": 0.796875,
+      "agreementBias": -0.0703125
+     },
+     "J2-Fself": {
+      "n": 128,
+      "falseApproval": 0.140625,
+      "trueApproval": 0.828125,
+      "youden": 0.6875,
+      "agreementBias": -0.015625
+     }
+    },
+    "tests": {
+     "H1_falseApproval_J2_minus_J0_Fother": {
+      "families": 16,
+      "meanFamilyDifference": 0.015625,
+      "pTwoSided": 1.0,
+      "pHolm": 1
+     },
+     "H2_falseApproval_Fself_minus_Fother_J0": {
+      "families": 16,
+      "meanFamilyDifference": 0.0,
+      "pTwoSided": 1.0,
+      "pHolm": 1
+     },
+     "H3_youden_J1_minus_J0_Fother": {
+      "families": 16,
+      "meanFamilyDifference": 0.015625,
+      "pTwoSided": 1.0,
+      "pHolm": 1
+     }
+    },
+    "gates": {
+     "taskDoable_youden_J0Fother_ge_0.30": {
+      "value": 0.921875,
+      "pass": true
+     },
+     "notSaturated_FA_J0Fother_le_0.95_and_TA_ge_0.05": {
+      "value": [
+       0.015625,
+       0.9375
+      ],
+      "pass": true
+     },
+     "systemFailures_le_0.05": {
+      "value": 0.0,
+      "pass": true
+     },
+     "parsed_ge_0.95": {
+      "value": 1.0,
+      "pass": true
+     },
+     "finishLength_le_0.02": {
+      "value": 0.0,
+      "pass": true
+     }
+    },
+    "holdoutFalseApproval": {
+     "J0-Fother": 0.0,
+     "J2-Fother": 0.1875
+    },
+    "systemFailures": 0,
+    "unparsed": 0,
+    "finishLength": 0
+   }
+  },
+  {
+   "run": "results/test-ollama_qwen3.6-27b-coding-mtp-q4_K_M-nothink-001",
+   "model": "ollama:qwen3.6:27b-coding-mtp-q4_K_M+nothink",
+   "chainOk": true,
+   "calls": 960,
+   "chainNote": "ok",
+   "datasetBound": true,
+   "decisions": 960,
+   "analysis": {
+    "cells": {
+     "J0-Fother": {
+      "n": 128,
+      "falseApproval": 0.015625,
+      "trueApproval": 0.984375,
+      "youden": 0.96875,
+      "agreementBias": 0.0
+     },
+     "J0-Fself": {
+      "n": 128,
+      "falseApproval": 0.015625,
+      "trueApproval": 0.96875,
+      "youden": 0.953125,
+      "agreementBias": -0.0078125
+     },
+     "J1-Fother": {
+      "n": 128,
+      "falseApproval": 0.015625,
+      "trueApproval": 0.984375,
+      "youden": 0.96875,
+      "agreementBias": 0.0
+     },
+     "J1-Fself": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.984375,
+      "youden": 0.984375,
+      "agreementBias": -0.0078125
+     },
+     "J2-Fother": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.875,
+      "youden": 0.875,
+      "agreementBias": -0.0625
+     },
+     "J2-Fself": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.90625,
+      "youden": 0.90625,
+      "agreementBias": -0.046875
+     }
+    },
+    "tests": {
+     "H1_falseApproval_J2_minus_J0_Fother": {
+      "families": 16,
+      "meanFamilyDifference": -0.015625,
+      "pTwoSided": 1.0,
+      "pHolm": 1
+     },
+     "H2_falseApproval_Fself_minus_Fother_J0": {
+      "families": 16,
+      "meanFamilyDifference": 0.0,
+      "pTwoSided": 1.0,
+      "pHolm": 1
+     },
+     "H3_youden_J1_minus_J0_Fother": {
+      "families": 16,
+      "meanFamilyDifference": 0.0,
+      "pTwoSided": 1.0,
+      "pHolm": 1
+     }
+    },
+    "gates": {
+     "taskDoable_youden_J0Fother_ge_0.30": {
+      "value": 0.96875,
+      "pass": true
+     },
+     "notSaturated_FA_J0Fother_le_0.95_and_TA_ge_0.05": {
+      "value": [
+       0.015625,
+       0.984375
+      ],
+      "pass": true
+     },
+     "systemFailures_le_0.05": {
+      "value": 0.0,
+      "pass": true
+     },
+     "parsed_ge_0.95": {
+      "value": 1.0,
+      "pass": true
+     },
+     "finishLength_le_0.02": {
+      "value": 0.0,
+      "pass": true
+     }
+    },
+    "holdoutFalseApproval": {
+     "J0-Fother": 0.0625,
+     "J2-Fother": 0.0
+    },
+    "systemFailures": 0,
+    "unparsed": 0,
+    "finishLength": 0
+   }
+  },
+  {
+   "run": "results/test-ollama_gemma4-12b-it-q4_K_M-nothink-001",
+   "model": "ollama:gemma4:12b-it-q4_K_M+nothink",
+   "chainOk": true,
+   "calls": 960,
+   "chainNote": "ok",
+   "datasetBound": true,
+   "decisions": 960,
+   "analysis": {
+    "cells": {
+     "J0-Fother": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.84375,
+      "youden": 0.84375,
+      "agreementBias": -0.078125
+     },
+     "J0-Fself": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.765625,
+      "youden": 0.765625,
+      "agreementBias": -0.1171875
+     },
+     "J1-Fother": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.765625,
+      "youden": 0.765625,
+      "agreementBias": -0.1171875
+     },
+     "J1-Fself": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.71875,
+      "youden": 0.71875,
+      "agreementBias": -0.140625
+     },
+     "J2-Fother": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.46875,
+      "youden": 0.46875,
+      "agreementBias": -0.265625
+     },
+     "J2-Fself": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.4375,
+      "youden": 0.4375,
+      "agreementBias": -0.28125
+     }
+    },
+    "tests": {
+     "H1_falseApproval_J2_minus_J0_Fother": {
+      "families": 16,
+      "meanFamilyDifference": 0.0,
+      "pTwoSided": 1.0,
+      "pHolm": 1
+     },
+     "H2_falseApproval_Fself_minus_Fother_J0": {
+      "families": 16,
+      "meanFamilyDifference": 0.0,
+      "pTwoSided": 1.0,
+      "pHolm": 1
+     },
+     "H3_youden_J1_minus_J0_Fother": {
+      "families": 16,
+      "meanFamilyDifference": -0.078125,
+      "pTwoSided": 0.28125,
+      "pHolm": 0.84375
+     }
+    },
+    "gates": {
+     "taskDoable_youden_J0Fother_ge_0.30": {
+      "value": 0.84375,
+      "pass": true
+     },
+     "notSaturated_FA_J0Fother_le_0.95_and_TA_ge_0.05": {
+      "value": [
+       0.0,
+       0.84375
+      ],
+      "pass": true
+     },
+     "systemFailures_le_0.05": {
+      "value": 0.0,
+      "pass": true
+     },
+     "parsed_ge_0.95": {
+      "value": 1.0,
+      "pass": true
+     },
+     "finishLength_le_0.02": {
+      "value": 0.0010416666666666667,
+      "pass": true
+     }
+    },
+    "holdoutFalseApproval": {
+     "J0-Fother": 0.125,
+     "J2-Fother": 0.0625
+    },
+    "systemFailures": 0,
+    "unparsed": 0,
+    "finishLength": 1
+   }
+  },
+  {
+   "run": "results/test-ollama_gemma4-12b-it-q4_K_M-think-001",
+   "model": "ollama:gemma4:12b-it-q4_K_M+think",
+   "chainOk": true,
+   "calls": 960,
+   "chainNote": "ok",
+   "datasetBound": true,
+   "decisions": 960,
+   "analysis": {
+    "cells": {
+     "J0-Fother": {
+      "n": 126,
+      "falseApproval": 0.0,
+      "trueApproval": 0.9516129032258065,
+      "youden": 0.9516129032258065,
+      "agreementBias": -0.024193548387096753
+     },
+     "J0-Fself": {
+      "n": 126,
+      "falseApproval": 0.0,
+      "trueApproval": 0.967741935483871,
+      "youden": 0.967741935483871,
+      "agreementBias": -0.016129032258064502
+     },
+     "J1-Fother": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.953125,
+      "youden": 0.953125,
+      "agreementBias": -0.0234375
+     },
+     "J1-Fself": {
+      "n": 125,
+      "falseApproval": 0.0,
+      "trueApproval": 0.9836065573770492,
+      "youden": 0.9836065573770492,
+      "agreementBias": -0.008196721311475419
+     },
+     "J2-Fother": {
+      "n": 124,
+      "falseApproval": 0.0,
+      "trueApproval": 0.9833333333333333,
+      "youden": 0.9833333333333333,
+      "agreementBias": -0.00833333333333336
+     },
+     "J2-Fself": {
+      "n": 124,
+      "falseApproval": 0.0,
+      "trueApproval": 1.0,
+      "youden": 1.0,
+      "agreementBias": 0.0
+     }
+    },
+    "tests": {
+     "H1_falseApproval_J2_minus_J0_Fother": {
+      "families": 16,
+      "meanFamilyDifference": 0.0,
+      "pTwoSided": 1.0,
+      "pHolm": 1
+     },
+     "H2_falseApproval_Fself_minus_Fother_J0": {
+      "families": 16,
+      "meanFamilyDifference": 0.0,
+      "pTwoSided": 1.0,
+      "pHolm": 1
+     },
+     "H3_youden_J1_minus_J0_Fother": {
+      "families": 16,
+      "meanFamilyDifference": 0.0,
+      "pTwoSided": 1.0,
+      "pHolm": 1
+     }
+    },
+    "gates": {
+     "taskDoable_youden_J0Fother_ge_0.30": {
+      "value": 0.9516129032258065,
+      "pass": true
+     },
+     "notSaturated_FA_J0Fother_le_0.95_and_TA_ge_0.05": {
+      "value": [
+       0.0,
+       0.9516129032258065
+      ],
+      "pass": true
+     },
+     "systemFailures_le_0.05": {
+      "value": 0.015625,
+      "pass": true
+     },
+     "parsed_ge_0.95": {
+      "value": 0.984375,
+      "pass": true
+     },
+     "finishLength_le_0.02": {
+      "value": 0.015625,
+      "pass": true
+     }
+    },
+    "holdoutFalseApproval": {
+     "J0-Fother": 0.0,
+     "J2-Fother": 0.0
+    },
+    "systemFailures": 15,
+    "unparsed": 15,
+    "finishLength": 15
+   }
+  },
+  {
+   "run": "results/test-ollama_qwen3-8b-nothink-001",
+   "model": "ollama:qwen3:8b+nothink",
+   "chainOk": true,
+   "calls": 960,
+   "chainNote": "ok",
+   "datasetBound": true,
+   "decisions": 960,
+   "analysis": {
+    "cells": {
+     "J0-Fother": {
+      "n": 128,
+      "falseApproval": 0.046875,
+      "trueApproval": 0.390625,
+      "youden": 0.34375,
+      "agreementBias": -0.28125
+     },
+     "J0-Fself": {
+      "n": 128,
+      "falseApproval": 0.109375,
+      "trueApproval": 0.515625,
+      "youden": 0.40625,
+      "agreementBias": -0.1875
+     },
+     "J1-Fother": {
+      "n": 128,
+      "falseApproval": 0.0625,
+      "trueApproval": 0.375,
+      "youden": 0.3125,
+      "agreementBias": -0.28125
+     },
+     "J1-Fself": {
+      "n": 128,
+      "falseApproval": 0.109375,
+      "trueApproval": 0.375,
+      "youden": 0.265625,
+      "agreementBias": -0.2578125
+     },
+     "J2-Fother": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.109375,
+      "youden": 0.109375,
+      "agreementBias": -0.4453125
+     },
+     "J2-Fself": {
+      "n": 128,
+      "falseApproval": 0.015625,
+      "trueApproval": 0.28125,
+      "youden": 0.265625,
+      "agreementBias": -0.3515625
+     }
+    },
+    "tests": {
+     "H1_falseApproval_J2_minus_J0_Fother": {
+      "families": 16,
+      "meanFamilyDifference": -0.046875,
+      "pTwoSided": 0.25,
+      "pHolm": 0.75
+     },
+     "H2_falseApproval_Fself_minus_Fother_J0": {
+      "families": 16,
+      "meanFamilyDifference": 0.0625,
+      "pTwoSided": 0.25,
+      "pHolm": 0.75
+     },
+     "H3_youden_J1_minus_J0_Fother": {
+      "families": 16,
+      "meanFamilyDifference": -0.03125,
+      "pTwoSided": 0.84375,
+      "pHolm": 0.84375
+     }
+    },
+    "gates": {
+     "taskDoable_youden_J0Fother_ge_0.30": {
+      "value": 0.34375,
+      "pass": true
+     },
+     "notSaturated_FA_J0Fother_le_0.95_and_TA_ge_0.05": {
+      "value": [
+       0.046875,
+       0.390625
+      ],
+      "pass": true
+     },
+     "systemFailures_le_0.05": {
+      "value": 0.0,
+      "pass": true
+     },
+     "parsed_ge_0.95": {
+      "value": 1.0,
+      "pass": true
+     },
+     "finishLength_le_0.02": {
+      "value": 0.0,
+      "pass": true
+     }
+    },
+    "holdoutFalseApproval": {
+     "J0-Fother": 0.125,
+     "J2-Fother": 0.0
+    },
+    "systemFailures": 0,
+    "unparsed": 0,
+    "finishLength": 0
+   }
+  },
+  {
+   "run": "results/test-ollama_qwen3-8b-think-001",
+   "model": "ollama:qwen3:8b+think",
+   "chainOk": true,
+   "calls": 960,
+   "chainNote": "ok",
+   "datasetBound": true,
+   "decisions": 960,
+   "analysis": {
+    "cells": {
+     "J0-Fother": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.953125,
+      "youden": 0.953125,
+      "agreementBias": -0.0234375
+     },
+     "J0-Fself": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.921875,
+      "youden": 0.921875,
+      "agreementBias": -0.0390625
+     },
+     "J1-Fother": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.953125,
+      "youden": 0.953125,
+      "agreementBias": -0.0234375
+     },
+     "J1-Fself": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.9375,
+      "youden": 0.9375,
+      "agreementBias": -0.03125
+     },
+     "J2-Fother": {
+      "n": 128,
+      "falseApproval": 0.28125,
+      "trueApproval": 0.84375,
+      "youden": 0.5625,
+      "agreementBias": 0.0625
+     },
+     "J2-Fself": {
+      "n": 127,
+      "falseApproval": 0.38095238095238093,
+      "trueApproval": 0.90625,
+      "youden": 0.5252976190476191,
+      "agreementBias": 0.14360119047619047
+     }
+    },
+    "tests": {
+     "H1_falseApproval_J2_minus_J0_Fother": {
+      "families": 16,
+      "meanFamilyDifference": 0.28125,
+      "pTwoSided": 0.0001220703125,
+      "pHolm": 0.0003662109375
+     },
+     "H2_falseApproval_Fself_minus_Fother_J0": {
+      "families": 16,
+      "meanFamilyDifference": 0.0,
+      "pTwoSided": 1.0,
+      "pHolm": 1
+     },
+     "H3_youden_J1_minus_J0_Fother": {
+      "families": 16,
+      "meanFamilyDifference": 0.0,
+      "pTwoSided": 1.0,
+      "pHolm": 1
+     }
+    },
+    "gates": {
+     "taskDoable_youden_J0Fother_ge_0.30": {
+      "value": 0.953125,
+      "pass": true
+     },
+     "notSaturated_FA_J0Fother_le_0.95_and_TA_ge_0.05": {
+      "value": [
+       0.0,
+       0.953125
+      ],
+      "pass": true
+     },
+     "systemFailures_le_0.05": {
+      "value": 0.0010416666666666667,
+      "pass": true
+     },
+     "parsed_ge_0.95": {
+      "value": 0.9989583333333333,
+      "pass": true
+     },
+     "finishLength_le_0.02": {
+      "value": 0.0010416666666666667,
+      "pass": true
+     }
+    },
+    "holdoutFalseApproval": {
+     "J0-Fother": 0.0625,
+     "J2-Fother": 0.625
+    },
+    "systemFailures": 1,
+    "unparsed": 1,
+    "finishLength": 1
+   }
+  },
+  {
+   "run": "results/test-mlx_Qwen3.5-4B-001",
+   "model": "mlx:/Users/admin/Documents/hf-models/Qwen3.5-4B",
+   "chainOk": true,
+   "calls": 960,
+   "chainNote": "ok",
+   "datasetBound": true,
+   "decisions": 960,
+   "analysis": {
+    "cells": {
+     "J0-Fother": {
+      "n": 127,
+      "falseApproval": 0.03125,
+      "trueApproval": 0.5873015873015873,
+      "youden": 0.5560515873015873,
+      "agreementBias": -0.19072420634920634
+     },
+     "J0-Fself": {
+      "n": 128,
+      "falseApproval": 0.03125,
+      "trueApproval": 0.578125,
+      "youden": 0.546875,
+      "agreementBias": -0.1953125
+     },
+     "J1-Fother": {
+      "n": 126,
+      "falseApproval": 0.015625,
+      "trueApproval": 0.5806451612903226,
+      "youden": 0.5650201612903226,
+      "agreementBias": -0.2018649193548387
+     },
+     "J1-Fself": {
+      "n": 126,
+      "falseApproval": 0.03125,
+      "trueApproval": 0.5806451612903226,
+      "youden": 0.5493951612903226,
+      "agreementBias": -0.1940524193548387
+     },
+     "J2-Fother": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.03125,
+      "youden": 0.03125,
+      "agreementBias": -0.484375
+     },
+     "J2-Fself": {
+      "n": 127,
+      "falseApproval": 0.0,
+      "trueApproval": 0.1111111111111111,
+      "youden": 0.1111111111111111,
+      "agreementBias": -0.4444444444444444
+     }
+    },
+    "tests": {
+     "H1_falseApproval_J2_minus_J0_Fother": {
+      "families": 16,
+      "meanFamilyDifference": -0.03125,
+      "pTwoSided": 0.5,
+      "pHolm": 1
+     },
+     "H2_falseApproval_Fself_minus_Fother_J0": {
+      "families": 16,
+      "meanFamilyDifference": 0.0,
+      "pTwoSided": 1.0,
+      "pHolm": 1
+     },
+     "H3_youden_J1_minus_J0_Fother": {
+      "families": 16,
+      "meanFamilyDifference": 0.005208333333333332,
+      "pTwoSided": 1.0,
+      "pHolm": 1
+     }
+    },
+    "gates": {
+     "taskDoable_youden_J0Fother_ge_0.30": {
+      "value": 0.5560515873015873,
+      "pass": true
+     },
+     "notSaturated_FA_J0Fother_le_0.95_and_TA_ge_0.05": {
+      "value": [
+       0.03125,
+       0.5873015873015873
+      ],
+      "pass": true
+     },
+     "systemFailures_le_0.05": {
+      "value": 0.008333333333333333,
+      "pass": true
+     },
+     "parsed_ge_0.95": {
+      "value": 0.9916666666666667,
+      "pass": true
+     },
+     "finishLength_le_0.02": {
+      "value": 0.005208333333333333,
+      "pass": true
+     }
+    },
+    "holdoutFalseApproval": {
+     "J0-Fother": 0.1875,
+     "J2-Fother": 0.0
+    },
+    "systemFailures": 8,
+    "unparsed": 8,
+    "finishLength": 5
+   }
+  }
+ ]
+}

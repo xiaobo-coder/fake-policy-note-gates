@@ -1,0 +1,18 @@
+{
+ "schema": "p923-run-v1.2",
+ "model": "mlx:/Users/admin/Documents/hf-models/Qwen3.5-4B",
+ "conds": [
+  "J2",
+  "J2b"
+ ],
+ "runtime": {
+  "server": "mlx-bridge",
+  "decoding": "greedy, thinking off"
+ },
+ "maxTokens": 4096,
+ "datasetSha256": "c128c5704826086e86f2fb0bef5310d98b39a2697537aca9ad52b95a0d37c255",
+ "split": "f11",
+ "sourceSha256": "673ebbaf088ffd4aea10bcd0c9de0d704c0e96a12f9704bd2c87a40686cd0e7c",
+ "startedAt": "2026-11-17T11:58:02.296Z",
+ "freeze": "freeze-v1.2"
+}

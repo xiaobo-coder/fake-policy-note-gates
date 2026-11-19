@@ -1,0 +1,29 @@
+{
+ "schema": "p923-h4-v1",
+ "tests": {
+  "qwen3-8b": {
+   "off": "results/test-ollama_qwen3-8b-nothink-001",
+   "on": "results/test-ollama_qwen3-8b-think-001",
+   "families": 16,
+   "meanDiffOfDiff": 0.328125,
+   "pTwoSided": 0.0001220703125,
+   "youdenJ0Fother": {
+    "off": 0.34375,
+    "on": 0.953125
+   },
+   "pHolm": 0.000244140625
+  },
+  "gemma4-12b": {
+   "off": "results/test-ollama_gemma4-12b-it-q4_K_M-nothink-001",
+   "on": "results/test-ollama_gemma4-12b-it-q4_K_M-think-001",
+   "families": 16,
+   "meanDiffOfDiff": 0.0,
+   "pTwoSided": 1.0,
+   "youdenJ0Fother": {
+    "off": 0.84375,
+    "on": 0.9516129032258065
+   },
+   "pHolm": 1
+  }
+ }
+}

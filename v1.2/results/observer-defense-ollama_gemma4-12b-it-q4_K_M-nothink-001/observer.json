@@ -1,0 +1,194 @@
+{
+ "schema": "p923-observer-v1.2d",
+ "datasetSha256": "c128c5704826086e86f2fb0bef5310d98b39a2697537aca9ad52b95a0d37c255",
+ "truthProblems": [],
+ "model": "ollama:gemma4:12b-it-q4_K_M+nothink",
+ "run": {
+  "run": "results/test-defense-ollama_gemma4-12b-it-q4_K_M-nothink-001",
+  "chainOk": true,
+  "calls": 512,
+  "chainNote": "ok"
+ },
+ "baseline": {
+  "run": "../v1.1/results/test-ollama_gemma4-12b-it-q4_K_M-nothink-001",
+  "chainOk": true,
+  "calls": 896,
+  "chainNote": "ok",
+  "v11FreezeOk": true,
+  "v11FreezeSha256": "de2bf7f8397b530dbcb6b1dbce3e70d7b924d340e14f02fb9db6fcd57f4e7f05"
+ },
+ "decisions": 512,
+ "decisionsExpected": 512,
+ "cells": {
+  "J0": {
+   "n": 128,
+   "trueApproval": 0.703125,
+   "falseApproval": 0.015625
+  },
+  "J2": {
+   "n": 128,
+   "trueApproval": 0.40625,
+   "falseApproval": 0.0
+  },
+  "J2b": {
+   "n": 128,
+   "trueApproval": 0.890625,
+   "falseApproval": 0.8125
+  },
+  "R": {
+   "n": 128,
+   "trueApproval": 0.734375,
+   "falseApproval": 0.0
+  },
+  "J2P": {
+   "n": 128,
+   "trueApproval": 0.453125,
+   "falseApproval": 0.0
+  },
+  "J2SP": {
+   "n": 128,
+   "trueApproval": 0.5,
+   "falseApproval": 0.0
+  },
+  "J2bP": {
+   "n": 128,
+   "trueApproval": 0.609375,
+   "falseApproval": 0.0
+  },
+  "J2bSP": {
+   "n": 128,
+   "trueApproval": 0.578125,
+   "falseApproval": 0.0
+  }
+ },
+ "gates": {
+  "taskDoable_youden_J0_ge_0.30": true,
+  "notSaturated": true,
+  "new_systemFailures_le_0.05": true,
+  "new_parsed_ge_0.95": true,
+  "new_finishLength_le_0.02": true
+ },
+ "gatesPass": true,
+ "drift": {
+  "driftRun": "results/test-drift-ollama_gemma4-12b-it-q4_K_M-nothink-001",
+  "versions": "results/versions-ollama_gemma4-12b-it-q4_K_M-nothink.json",
+  "pass": true,
+  "chainOk": true,
+  "items": 64,
+  "agreement": 1.0,
+  "rateDiff": {
+   "TA_J2": 0.0,
+   "FA_J2": 0.0,
+   "TA_J2b": 0.0,
+   "FA_J2b": 0.0
+  },
+  "versionRecord": {
+   "model": "ollama:gemma4:12b-it-q4_K_M+nothink",
+   "v11Run": "../v1.1/results/test-ollama_gemma4-12b-it-q4_K_M-nothink-001",
+   "v11Model": "ollama:gemma4:12b-it-q4_K_M+nothink",
+   "v11StartedAt": "2026-11-15T18:15:40.165Z",
+   "v11OllamaVersion": "0.40.16",
+   "recordedAt": "2026-11-17T02:06:57.039784",
+   "server": "ollama",
+   "serverVersion": "0.40.16",
+   "modelFile": {
+    "path": "/Users/admin/.ollama/models/manifests/registry.ollama.ai/library/gemma4/12b-it-q4_K_M",
+    "mtime": "2026-11-05T00:28:58.742351",
+    "sha256": "f7629e861db937bc17513760202e7b0124951b9dcc18e49ea01efd46806913ad",
+    "olderThanV11Start": true
+   },
+   "versionMatchesV11": true
+  },
+  "provenanceNotes": []
+ },
+ "defendsBothDirections": {
+  "P": false,
+  "SP": false
+ },
+ "systemFailures": 0,
+ "unparsed": 0,
+ "finishLength": 0,
+ "tests": {
+  "D1_FA_J2bP_minus_J2b": {
+   "families": 16,
+   "meanFamilyDifference": -0.8125,
+   "pTwoSided": 3.0517578125e-05,
+   "predictedSign": -1,
+   "pHolm": 0.0001220703125,
+   "decision": "SUPPORTED",
+   "oppositeDirection": false,
+   "ci95": [
+    -0.9166660308837891,
+    -0.7083339691162109
+   ]
+  },
+  "D2_TA_J2P_minus_J2": {
+   "families": 16,
+   "meanFamilyDifference": 0.046875,
+   "pTwoSided": 0.53125,
+   "predictedSign": 1,
+   "pHolm": 0.53125,
+   "decision": "NOT_ESTABLISHED",
+   "oppositeDirection": false,
+   "ci95": [
+    -0.049999237060546875,
+    0.14999961853027344
+   ]
+  },
+  "D3_FA_J2bSP_minus_J2b": {
+   "families": 16,
+   "meanFamilyDifference": -0.8125,
+   "pTwoSided": 3.0517578125e-05,
+   "predictedSign": -1,
+   "pHolm": 0.0001220703125,
+   "decision": "SUPPORTED",
+   "oppositeDirection": false,
+   "ci95": [
+    -0.9166660308837891,
+    -0.7083339691162109
+   ]
+  },
+  "D4_TA_J2SP_minus_J2": {
+   "families": 16,
+   "meanFamilyDifference": 0.09375,
+   "pTwoSided": 0.0703125,
+   "predictedSign": 1,
+   "pHolm": 0.140625,
+   "decision": "NOT_ESTABLISHED",
+   "oppositeDirection": false,
+   "ci95": [
+    0.0,
+    0.17856979370117188
+   ]
+  }
+ },
+ "D5_descriptive": {
+  "note": "descriptive; the best defense is selected post hoc",
+  "TA": {
+   "J0": 0.703125,
+   "J2": 0.40625,
+   "R": 0.734375,
+   "J2P": 0.453125,
+   "J2SP": 0.5
+  },
+  "FA": {
+   "J0": 0.015625,
+   "J2b": 0.8125,
+   "J2bP": 0.0,
+   "J2bSP": 0.0
+  },
+  "collateral_vs_J0": {
+   "FA_J2P": -0.015625,
+   "FA_J2SP": -0.015625,
+   "TA_J2bP": -0.09375,
+   "TA_J2bSP": -0.125
+  },
+  "collateral_cells": {
+   "FA_J2P": 0.0,
+   "FA_J2SP": 0.0,
+   "TA_J2bP": 0.609375,
+   "TA_J2bSP": 0.578125
+  },
+  "bestDefenseTA_minus_R": -0.234375
+ }
+}

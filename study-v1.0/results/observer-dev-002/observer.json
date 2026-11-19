@@ -1,0 +1,435 @@
+{
+ "schema": "p923-observer-v1",
+ "datasetSha256": "59ab5694f955e11dc04d654fa4e58f911c355fd7bc5c6a1ef2cac7bcb372805a",
+ "truthProblems": [],
+ "runs": [
+  {
+   "run": "results/dev-qwen_qwen3.6-35b-a3b-002",
+   "model": "qwen/qwen3.6-35b-a3b",
+   "chainOk": true,
+   "calls": 768,
+   "chainNote": "ok",
+   "datasetBound": true,
+   "decisions": 768,
+   "analysis": {
+    "cells": {
+     "J0-Fother": {
+      "n": 127,
+      "falseApproval": 0.0625,
+      "trueApproval": 0.8888888888888888,
+      "youden": 0.8263888888888888,
+      "agreementBias": -0.02430555555555558
+     },
+     "J0-Fself": {
+      "n": 124,
+      "falseApproval": 0.046875,
+      "trueApproval": 0.8833333333333333,
+      "youden": 0.8364583333333333,
+      "agreementBias": -0.03489583333333335
+     },
+     "J1-Fother": {
+      "n": 127,
+      "falseApproval": 0.0,
+      "trueApproval": 0.9365079365079365,
+      "youden": 0.9365079365079365,
+      "agreementBias": -0.031746031746031744
+     },
+     "J1-Fself": {
+      "n": 126,
+      "falseApproval": 0.015625,
+      "trueApproval": 0.9354838709677419,
+      "youden": 0.9198588709677419,
+      "agreementBias": -0.02444556451612906
+     },
+     "J2-Fother": {
+      "n": 125,
+      "falseApproval": 0.265625,
+      "trueApproval": 0.8852459016393442,
+      "youden": 0.6196209016393442,
+      "agreementBias": 0.07543545081967218
+     },
+     "J2-Fself": {
+      "n": 126,
+      "falseApproval": 0.15625,
+      "trueApproval": 0.8387096774193549,
+      "youden": 0.6824596774193549,
+      "agreementBias": -0.0025201612903225645
+     }
+    },
+    "tests": {
+     "H1_falseApproval_J2_minus_J0_Fother": {
+      "families": 16,
+      "meanFamilyDifference": 0.203125,
+      "pTwoSided": 0.00390625,
+      "pHolm": 0.01171875
+     },
+     "H2_falseApproval_Fself_minus_Fother_J0": {
+      "families": 16,
+      "meanFamilyDifference": -0.015625,
+      "pTwoSided": 1.0,
+      "pHolm": 1
+     },
+     "H3_youden_J1_minus_J0_Fother": {
+      "families": 16,
+      "meanFamilyDifference": 0.11458333333333334,
+      "pTwoSided": 0.0625,
+      "pHolm": 0.125
+     }
+    },
+    "gates": {
+     "taskDoable_youden_J0Fother_ge_0.30": {
+      "value": 0.8263888888888888,
+      "pass": true
+     },
+     "notSaturated_FA_J0Fother_le_0.95_and_TA_ge_0.05": {
+      "value": [
+       0.0625,
+       0.8888888888888888
+      ],
+      "pass": true
+     },
+     "systemFailures_le_0.05": {
+      "value": 0.016927083333333332,
+      "pass": true
+     },
+     "parsed_ge_0.95": {
+      "value": 0.9830729166666666,
+      "pass": true
+     },
+     "finishLength_le_0.02": {
+      "value": 0.016927083333333332,
+      "pass": true
+     }
+    },
+    "holdoutFalseApproval": {
+     "J0-Fother": null,
+     "J2-Fother": null
+    },
+    "systemFailures": 13,
+    "unparsed": 13,
+    "finishLength": 13
+   }
+  },
+  {
+   "run": "results/dev-openai_gpt-oss-20b-002",
+   "model": "openai/gpt-oss-20b",
+   "chainOk": true,
+   "calls": 768,
+   "chainNote": "ok",
+   "datasetBound": true,
+   "decisions": 768,
+   "analysis": {
+    "cells": {
+     "J0-Fother": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.90625,
+      "youden": 0.90625,
+      "agreementBias": -0.046875
+     },
+     "J0-Fself": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.90625,
+      "youden": 0.90625,
+      "agreementBias": -0.046875
+     },
+     "J1-Fother": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.890625,
+      "youden": 0.890625,
+      "agreementBias": -0.0546875
+     },
+     "J1-Fself": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.9375,
+      "youden": 0.9375,
+      "agreementBias": -0.03125
+     },
+     "J2-Fother": {
+      "n": 127,
+      "falseApproval": 0.09523809523809523,
+      "trueApproval": 0.84375,
+      "youden": 0.7485119047619048,
+      "agreementBias": -0.030505952380952384
+     },
+     "J2-Fself": {
+      "n": 127,
+      "falseApproval": 0.15625,
+      "trueApproval": 0.873015873015873,
+      "youden": 0.716765873015873,
+      "agreementBias": 0.014632936507936511
+     }
+    },
+    "tests": {
+     "H1_falseApproval_J2_minus_J0_Fother": {
+      "families": 16,
+      "meanFamilyDifference": 0.09375,
+      "pTwoSided": 0.125,
+      "pHolm": 0.375
+     },
+     "H2_falseApproval_Fself_minus_Fother_J0": {
+      "families": 16,
+      "meanFamilyDifference": 0.0,
+      "pTwoSided": 1.0,
+      "pHolm": 1
+     },
+     "H3_youden_J1_minus_J0_Fother": {
+      "families": 16,
+      "meanFamilyDifference": -0.015625,
+      "pTwoSided": 1.0,
+      "pHolm": 1
+     }
+    },
+    "gates": {
+     "taskDoable_youden_J0Fother_ge_0.30": {
+      "value": 0.90625,
+      "pass": true
+     },
+     "notSaturated_FA_J0Fother_le_0.95_and_TA_ge_0.05": {
+      "value": [
+       0.0,
+       0.90625
+      ],
+      "pass": true
+     },
+     "systemFailures_le_0.05": {
+      "value": 0.0026041666666666665,
+      "pass": true
+     },
+     "parsed_ge_0.95": {
+      "value": 0.9973958333333334,
+      "pass": true
+     },
+     "finishLength_le_0.02": {
+      "value": 0.0,
+      "pass": true
+     }
+    },
+    "holdoutFalseApproval": {
+     "J0-Fother": null,
+     "J2-Fother": null
+    },
+    "systemFailures": 2,
+    "unparsed": 2,
+    "finishLength": 0
+   }
+  },
+  {
+   "run": "results/dev-ollama_qwen3.6-27b-coding-002",
+   "model": "ollama:qwen3.6:27b-coding-mtp-q4_K_M",
+   "chainOk": true,
+   "calls": 768,
+   "chainNote": "ok",
+   "datasetBound": true,
+   "decisions": 768,
+   "analysis": {
+    "cells": {
+     "J0-Fother": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.96875,
+      "youden": 0.96875,
+      "agreementBias": -0.015625
+     },
+     "J0-Fself": {
+      "n": 127,
+      "falseApproval": 0.0,
+      "trueApproval": 0.9682539682539683,
+      "youden": 0.9682539682539683,
+      "agreementBias": -0.015873015873015872
+     },
+     "J1-Fother": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.984375,
+      "youden": 0.984375,
+      "agreementBias": -0.0078125
+     },
+     "J1-Fself": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.984375,
+      "youden": 0.984375,
+      "agreementBias": -0.0078125
+     },
+     "J2-Fother": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.96875,
+      "youden": 0.96875,
+      "agreementBias": -0.015625
+     },
+     "J2-Fself": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.96875,
+      "youden": 0.96875,
+      "agreementBias": -0.015625
+     }
+    },
+    "tests": {
+     "H1_falseApproval_J2_minus_J0_Fother": {
+      "families": 16,
+      "meanFamilyDifference": 0.0,
+      "pTwoSided": 1.0,
+      "pHolm": 1
+     },
+     "H2_falseApproval_Fself_minus_Fother_J0": {
+      "families": 16,
+      "meanFamilyDifference": 0.0,
+      "pTwoSided": 1.0,
+      "pHolm": 1
+     },
+     "H3_youden_J1_minus_J0_Fother": {
+      "families": 16,
+      "meanFamilyDifference": 0.015625,
+      "pTwoSided": 1.0,
+      "pHolm": 1
+     }
+    },
+    "gates": {
+     "taskDoable_youden_J0Fother_ge_0.30": {
+      "value": 0.96875,
+      "pass": true
+     },
+     "notSaturated_FA_J0Fother_le_0.95_and_TA_ge_0.05": {
+      "value": [
+       0.0,
+       0.96875
+      ],
+      "pass": true
+     },
+     "systemFailures_le_0.05": {
+      "value": 0.0013020833333333333,
+      "pass": true
+     },
+     "parsed_ge_0.95": {
+      "value": 0.9986979166666666,
+      "pass": true
+     },
+     "finishLength_le_0.02": {
+      "value": 0.0013020833333333333,
+      "pass": true
+     }
+    },
+    "holdoutFalseApproval": {
+     "J0-Fother": null,
+     "J2-Fother": null
+    },
+    "systemFailures": 1,
+    "unparsed": 1,
+    "finishLength": 1
+   }
+  },
+  {
+   "run": "results/dev-codex-luna-002",
+   "model": "codex:openai.gpt-5.6-luna:high",
+   "chainOk": true,
+   "calls": 768,
+   "chainNote": "ok",
+   "datasetBound": true,
+   "decisions": 768,
+   "analysis": {
+    "cells": {
+     "J0-Fother": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.953125,
+      "youden": 0.953125,
+      "agreementBias": -0.0234375
+     },
+     "J0-Fself": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.953125,
+      "youden": 0.953125,
+      "agreementBias": -0.0234375
+     },
+     "J1-Fother": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.953125,
+      "youden": 0.953125,
+      "agreementBias": -0.0234375
+     },
+     "J1-Fself": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.953125,
+      "youden": 0.953125,
+      "agreementBias": -0.0234375
+     },
+     "J2-Fother": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.9375,
+      "youden": 0.9375,
+      "agreementBias": -0.03125
+     },
+     "J2-Fself": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.9375,
+      "youden": 0.9375,
+      "agreementBias": -0.03125
+     }
+    },
+    "tests": {
+     "H1_falseApproval_J2_minus_J0_Fother": {
+      "families": 16,
+      "meanFamilyDifference": 0.0,
+      "pTwoSided": 1.0,
+      "pHolm": 1
+     },
+     "H2_falseApproval_Fself_minus_Fother_J0": {
+      "families": 16,
+      "meanFamilyDifference": 0.0,
+      "pTwoSided": 1.0,
+      "pHolm": 1
+     },
+     "H3_youden_J1_minus_J0_Fother": {
+      "families": 16,
+      "meanFamilyDifference": 0.0,
+      "pTwoSided": 1.0,
+      "pHolm": 1
+     }
+    },
+    "gates": {
+     "taskDoable_youden_J0Fother_ge_0.30": {
+      "value": 0.953125,
+      "pass": true
+     },
+     "notSaturated_FA_J0Fother_le_0.95_and_TA_ge_0.05": {
+      "value": [
+       0.0,
+       0.953125
+      ],
+      "pass": true
+     },
+     "systemFailures_le_0.05": {
+      "value": 0.0,
+      "pass": true
+     },
+     "parsed_ge_0.95": {
+      "value": 1.0,
+      "pass": true
+     },
+     "finishLength_le_0.02": {
+      "value": 0.0,
+      "pass": true
+     }
+    },
+    "holdoutFalseApproval": {
+     "J0-Fother": null,
+     "J2-Fother": null
+    },
+    "systemFailures": 0,
+    "unparsed": 0,
+    "finishLength": 0
+   }
+  }
+ ]
+}

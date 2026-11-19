@@ -1,0 +1,115 @@
+{
+ "schema": "p923-observer-v1.2",
+ "datasetSha256": "c128c5704826086e86f2fb0bef5310d98b39a2697537aca9ad52b95a0d37c255",
+ "truthProblems": [],
+ "runs": [
+  {
+   "run": "results/test-ollama_qwen3-8b-think-001",
+   "model": "ollama:qwen3:8b+think",
+   "chainOk": true,
+   "calls": 1408,
+   "chainNote": "ok",
+   "datasetBound": true,
+   "decisions": 1408,
+   "decisionsExpected": 1408,
+   "analysis": {
+    "cells": {
+     "J0": {
+      "n": 126,
+      "trueApproval": 0.9032258064516129,
+      "falseApproval": 0.0,
+      "youden": 0.9032258064516129
+     },
+     "J2": {
+      "n": 127,
+      "trueApproval": 0.90625,
+      "falseApproval": 0.2857142857142857,
+      "youden": 0.6205357142857143
+     },
+     "J2a": {
+      "n": 127,
+      "trueApproval": 0.875,
+      "falseApproval": 0.4603174603174603,
+      "youden": 0.4146825396825397
+     },
+     "J2b": {
+      "n": 128,
+      "trueApproval": 0.90625,
+      "falseApproval": 0.9375,
+      "youden": -0.03125
+     },
+     "J2c": {
+      "n": 126,
+      "trueApproval": 0.9047619047619048,
+      "falseApproval": 0.14285714285714285,
+      "youden": 0.7619047619047619
+     },
+     "R": {
+      "n": 128,
+      "trueApproval": 0.90625,
+      "falseApproval": 0.0,
+      "youden": 0.90625
+     },
+     "J2R": {
+      "n": 128,
+      "trueApproval": 0.859375,
+      "falseApproval": 0.0,
+      "youden": 0.859375
+     }
+    },
+    "tests": {
+     "H5_TA_J2_minus_J0": {
+      "families": 16,
+      "meanFamilyDifference": 0.005208333333333336,
+      "pTwoSided": 1.0,
+      "pHolm": 1,
+      "decision": "NOT_ESTABLISHED"
+     },
+     "H6_TA_paraphrases_minus_J0": {
+      "families": 16,
+      "meanFamilyDifference": -0.005208333333333346,
+      "pTwoSided": 1.0,
+      "pHolm": 1,
+      "decision": "NOT_ESTABLISHED"
+     },
+     "H7_TA_R_minus_J2": {
+      "families": 16,
+      "meanFamilyDifference": 0.0,
+      "pTwoSided": 1.0,
+      "pHolm": 1,
+      "decision": "NOT_ESTABLISHED"
+     },
+     "H8_FA_J2R_minus_J0": {
+      "families": 16,
+      "meanFamilyDifference": 0.0,
+      "pTwoSided": 1.0,
+      "pHolm": 1,
+      "decision": "NOT_ESTABLISHED"
+     }
+    },
+    "gates": {
+     "taskDoable_youden_J0_ge_0.30": true,
+     "notSaturated": true,
+     "systemFailures_le_0.05": true,
+     "parsed_ge_0.95": true,
+     "finishLength_le_0.02": true,
+     "thinkingOn_reasoning_ge_0.95": true
+    },
+    "gatesPass": true,
+    "systemFailures": 6,
+    "unparsed": 3,
+    "finishLength": 3,
+    "reviews": 1408,
+    "callsWithReasoning": 1405,
+    "tests_v12": {
+     "H1r_FA_J2_minus_J0": {
+      "families": 16,
+      "meanFamilyDifference": 0.2864583333333333,
+      "pTwoSided": 0.0009765625,
+      "decision": "SUPPORTED"
+     }
+    }
+   }
+  }
+ ]
+}

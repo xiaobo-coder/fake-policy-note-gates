@@ -1,0 +1,17 @@
+{
+ "model": "ollama:gemma4:12b-it-q4_K_M+nothink",
+ "v11Run": "../v1.1/results/test-ollama_gemma4-12b-it-q4_K_M-nothink-001",
+ "v11Model": "ollama:gemma4:12b-it-q4_K_M+nothink",
+ "v11StartedAt": "2026-11-15T18:15:40.165Z",
+ "v11OllamaVersion": "0.40.16",
+ "recordedAt": "2026-11-17T10:47:38.094015",
+ "server": "ollama",
+ "serverVersion": "0.40.16",
+ "modelFile": {
+  "path": "/Users/admin/.ollama/models/manifests/registry.ollama.ai/library/gemma4/12b-it-q4_K_M",
+  "mtime": "2026-11-05T00:28:58.742351",
+  "sha256": "f7629e861db937bc17513760202e7b0124951b9dcc18e49ea01efd46806913ad",
+  "olderThanV11Start": true
+ },
+ "versionMatchesV11": true
+}

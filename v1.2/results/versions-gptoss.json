@@ -1,0 +1,44 @@
+{
+ "model": "openai/gpt-oss-20b",
+ "v11Run": "../v1.1/results/test-gptoss-001",
+ "v11Model": "openai/gpt-oss-20b",
+ "v11StartedAt": "2026-11-15T17:40:57.402Z",
+ "v11OllamaVersion": "0.40.16",
+ "recordedAt": "2026-11-17T01:38:54.268420",
+ "server": "lmstudio",
+ "serverVersion": {
+  "app": "0.4.26+4",
+  "cli": "CLI commit: dcefd5a"
+ },
+ "lmsModel": {
+  "type": "llm",
+  "modelKey": "openai/gpt-oss-20b",
+  "format": "safetensors",
+  "displayName": "GPT-OSS 20B",
+  "publisher": "openai",
+  "path": "openai/gpt-oss-20b",
+  "sizeBytes": 12104314420,
+  "indexedModelIdentifier": "openai/gpt-oss-20b",
+  "deviceIdentifier": null,
+  "paramsString": "20B",
+  "architecture": "gpt_oss",
+  "quantization": {
+   "name": "MXFP4",
+   "bits": 4
+  },
+  "variants": [
+   "openai/gpt-oss-20b@mxfp4"
+  ],
+  "selectedVariant": "openai/gpt-oss-20b@mxfp4",
+  "vision": false,
+  "trainedForToolUse": true,
+  "maxContextLength": 131072
+ },
+ "modelFile": {
+  "path": "/Users/admin/.lmstudio/hub/models/openai/gpt-oss-20b",
+  "mtime": "2026-10-11T10:12:12.884399",
+  "sha256": null,
+  "olderThanV11Start": true
+ },
+ "versionMatchesV11": null
+}

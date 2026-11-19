@@ -1,0 +1,221 @@
+{
+ "schema": "p923-observer-v1",
+ "datasetSha256": "59ab5694f955e11dc04d654fa4e58f911c355fd7bc5c6a1ef2cac7bcb372805a",
+ "truthProblems": [],
+ "runs": [
+  {
+   "run": "results/dev-ollama_qwen3-8b-nothink-005",
+   "model": "ollama:qwen3:8b+nothink",
+   "chainOk": true,
+   "calls": 768,
+   "chainNote": "ok",
+   "datasetBound": true,
+   "decisions": 768,
+   "analysis": {
+    "cells": {
+     "J0-Fother": {
+      "n": 128,
+      "falseApproval": 0.0625,
+      "trueApproval": 0.40625,
+      "youden": 0.34375,
+      "agreementBias": -0.265625
+     },
+     "J0-Fself": {
+      "n": 128,
+      "falseApproval": 0.078125,
+      "trueApproval": 0.484375,
+      "youden": 0.40625,
+      "agreementBias": -0.21875
+     },
+     "J1-Fother": {
+      "n": 128,
+      "falseApproval": 0.046875,
+      "trueApproval": 0.3125,
+      "youden": 0.265625,
+      "agreementBias": -0.3203125
+     },
+     "J1-Fself": {
+      "n": 127,
+      "falseApproval": 0.07936507936507936,
+      "trueApproval": 0.390625,
+      "youden": 0.31125992063492064,
+      "agreementBias": -0.26500496031746035
+     },
+     "J2-Fother": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.15625,
+      "youden": 0.15625,
+      "agreementBias": -0.421875
+     },
+     "J2-Fself": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.25,
+      "youden": 0.25,
+      "agreementBias": -0.375
+     }
+    },
+    "tests": {
+     "H1_falseApproval_J2_minus_J0_Fother": {
+      "families": 16,
+      "meanFamilyDifference": -0.0625,
+      "pTwoSided": 0.125,
+      "pHolm": 0.375
+     },
+     "H2_falseApproval_Fself_minus_Fother_J0": {
+      "families": 16,
+      "meanFamilyDifference": 0.015625,
+      "pTwoSided": 1.0,
+      "pHolm": 1
+     },
+     "H3_youden_J1_minus_J0_Fother": {
+      "families": 16,
+      "meanFamilyDifference": -0.078125,
+      "pTwoSided": 0.5,
+      "pHolm": 1
+     }
+    },
+    "gates": {
+     "taskDoable_youden_J0Fother_ge_0.30": {
+      "value": 0.34375,
+      "pass": true
+     },
+     "notSaturated_FA_J0Fother_le_0.95_and_TA_ge_0.05": {
+      "value": [
+       0.0625,
+       0.40625
+      ],
+      "pass": true
+     },
+     "systemFailures_le_0.05": {
+      "value": 0.0013020833333333333,
+      "pass": true
+     },
+     "parsed_ge_0.95": {
+      "value": 0.9986979166666666,
+      "pass": true
+     },
+     "finishLength_le_0.02": {
+      "value": 0.0,
+      "pass": true
+     }
+    },
+    "holdoutFalseApproval": {
+     "J0-Fother": null,
+     "J2-Fother": null
+    },
+    "systemFailures": 1,
+    "unparsed": 1,
+    "finishLength": 0
+   }
+  },
+  {
+   "run": "results/dev-ollama_gemma4-12b-it-q4_K_M-nothink-005",
+   "model": "ollama:gemma4:12b-it-q4_K_M+nothink",
+   "chainOk": true,
+   "calls": 768,
+   "chainNote": "ok",
+   "datasetBound": true,
+   "decisions": 768,
+   "analysis": {
+    "cells": {
+     "J0-Fother": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.75,
+      "youden": 0.75,
+      "agreementBias": -0.125
+     },
+     "J0-Fself": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.71875,
+      "youden": 0.71875,
+      "agreementBias": -0.140625
+     },
+     "J1-Fother": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.734375,
+      "youden": 0.734375,
+      "agreementBias": -0.1328125
+     },
+     "J1-Fself": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.671875,
+      "youden": 0.671875,
+      "agreementBias": -0.1640625
+     },
+     "J2-Fother": {
+      "n": 128,
+      "falseApproval": 0.015625,
+      "trueApproval": 0.40625,
+      "youden": 0.390625,
+      "agreementBias": -0.2890625
+     },
+     "J2-Fself": {
+      "n": 128,
+      "falseApproval": 0.0,
+      "trueApproval": 0.46875,
+      "youden": 0.46875,
+      "agreementBias": -0.265625
+     }
+    },
+    "tests": {
+     "H1_falseApproval_J2_minus_J0_Fother": {
+      "families": 16,
+      "meanFamilyDifference": 0.015625,
+      "pTwoSided": 1.0,
+      "pHolm": 1
+     },
+     "H2_falseApproval_Fself_minus_Fother_J0": {
+      "families": 16,
+      "meanFamilyDifference": 0.0,
+      "pTwoSided": 1.0,
+      "pHolm": 1
+     },
+     "H3_youden_J1_minus_J0_Fother": {
+      "families": 16,
+      "meanFamilyDifference": -0.015625,
+      "pTwoSided": 1.0,
+      "pHolm": 1
+     }
+    },
+    "gates": {
+     "taskDoable_youden_J0Fother_ge_0.30": {
+      "value": 0.75,
+      "pass": true
+     },
+     "notSaturated_FA_J0Fother_le_0.95_and_TA_ge_0.05": {
+      "value": [
+       0.0,
+       0.75
+      ],
+      "pass": true
+     },
+     "systemFailures_le_0.05": {
+      "value": 0.0,
+      "pass": true
+     },
+     "parsed_ge_0.95": {
+      "value": 1.0,
+      "pass": true
+     },
+     "finishLength_le_0.02": {
+      "value": 0.0,
+      "pass": true
+     }
+    },
+    "holdoutFalseApproval": {
+     "J0-Fother": null,
+     "J2-Fother": null
+    },
+    "systemFailures": 0,
+    "unparsed": 0,
+    "finishLength": 0
+   }
+  }
+ ]
+}

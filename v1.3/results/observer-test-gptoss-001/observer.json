@@ -1,0 +1,327 @@
+{
+ "schema": "p923-observer-v1.3",
+ "datasetSha256": "c128c5704826086e86f2fb0bef5310d98b39a2697537aca9ad52b95a0d37c255",
+ "truthProblems": [],
+ "model": "openai/gpt-oss-20b",
+ "run": {
+  "run": "results/test-gptoss-001",
+  "chainOk": true,
+  "calls": 1792,
+  "chainNote": "ok"
+ },
+ "baseline": {
+  "run": "../v1.1/results/test-gptoss-001",
+  "chainOk": true,
+  "calls": 896,
+  "chainNote": "ok",
+  "v11FreezeOk": true,
+  "v11FreezeSha256": "de2bf7f8397b530dbcb6b1dbce3e70d7b924d340e14f02fb9db6fcd57f4e7f05"
+ },
+ "rows": 1408,
+ "rowsExpected": 1408,
+ "cells": {
+  "J2": {
+   "n": 128,
+   "trueApproval": 0.8125,
+   "falseApproval": 0.0625
+  },
+  "R": {
+   "n": 128,
+   "trueApproval": 0.859375,
+   "falseApproval": 0.0
+  },
+  "R2": {
+   "n": 128,
+   "trueApproval": 0.890625,
+   "falseApproval": 0.0
+  },
+  "R3": {
+   "n": 128,
+   "trueApproval": 0.90625,
+   "falseApproval": 0.0
+  },
+  "J1": {
+   "n": 128,
+   "trueApproval": 0.890625,
+   "falseApproval": 0.0
+  },
+  "J2S": {
+   "n": 128,
+   "trueApproval": 0.90625,
+   "falseApproval": 0.0
+  },
+  "J2bS": {
+   "n": 128,
+   "trueApproval": 0.890625,
+   "falseApproval": 0.0
+  },
+  "J1S": {
+   "n": 128,
+   "trueApproval": 0.890625,
+   "falseApproval": 0.0
+  },
+  "v11_J0": {
+   "n": 128,
+   "trueApproval": 0.875,
+   "falseApproval": 0.0
+  },
+  "v11_J2": {
+   "n": 128,
+   "trueApproval": 0.78125,
+   "falseApproval": 0.09375
+  },
+  "v11_J2b": {
+   "n": 128,
+   "trueApproval": 0.90625,
+   "falseApproval": 0.921875
+  },
+  "v11_R": {
+   "n": 128,
+   "trueApproval": 0.859375,
+   "falseApproval": 0.015625
+  }
+ },
+ "gates": {
+  "taskDoable_youden_J1_ge_0.30": true,
+  "notSaturated_J1": true,
+  "gate_parsed_ge_0.95": true,
+  "gate_systemFailures_le_0.05": true,
+  "gate_finishLength_le_0.02": true,
+  "sanitizer_parsed_ge_0.95": true,
+  "sanitizer_finishLength_le_0.02": true,
+  "detector_parsed_ge_0.95": true,
+  "detector_finishLength_le_0.02": true,
+  "complete": true
+ },
+ "gatesPass": true,
+ "tests": {
+  "E1_TA_R_minus_J2S": {
+   "families": 16,
+   "meanFamilyDifference": -0.046875,
+   "pTwoSided": 0.25,
+   "predictedSign": 1,
+   "pHolm": 0.5,
+   "decision": "NOT_ESTABLISHED",
+   "oppositeDirection": false,
+   "ci95": [
+    -0.09999847412109375,
+    0.0
+   ]
+  },
+  "E2_FA_R_minus_J2bS": {
+   "families": 16,
+   "meanFamilyDifference": 0.0,
+   "pTwoSided": 1.0,
+   "predictedSign": -1,
+   "pHolm": 1,
+   "decision": "NOT_ESTABLISHED",
+   "oppositeDirection": false,
+   "ci95": [
+    0.0,
+    0.0
+   ]
+  },
+  "E3_TA_R23mean_minus_J2": {
+   "families": 16,
+   "meanFamilyDifference": 0.0859375,
+   "pTwoSided": 0.0625,
+   "predictedSign": 1,
+   "pHolm": 0.1875,
+   "decision": "NOT_ESTABLISHED",
+   "oppositeDirection": false,
+   "ci95": [
+    0.0,
+    0.16666603088378906
+   ]
+  }
+ },
+ "detector": {
+  "DJ1": {
+   "n": 128,
+   "flagRate": 0.0,
+   "unparsed": 0
+  },
+  "DJ2": {
+   "n": 128,
+   "flagRate": 1.0,
+   "unparsed": 0
+  },
+  "DJ2b": {
+   "n": 128,
+   "flagRate": 1.0,
+   "unparsed": 0
+  }
+ },
+ "twinIdentity": {
+  "J2S": 0.96875,
+  "J2bS": 1.0,
+  "DJ2": 1.0,
+  "DJ2b": 1.0
+ },
+ "residualClaims": {
+  "J2S": {
+   "n": 128,
+   "stillMatchesClaimRegex": 0.78125,
+   "empty": 0.21875
+  },
+  "J2bS": {
+   "n": 128,
+   "stillMatchesClaimRegex": 0.0,
+   "empty": 1.0
+  },
+  "J1S": {
+   "n": 128,
+   "stillMatchesClaimRegex": 0.0625,
+   "empty": 0.0
+  }
+ },
+ "sanitizerCollateral": {
+  "TA_J1S_minus_J1": 0.0,
+  "FA_J1S_minus_J1": 0.0
+ },
+ "pipelines": {
+  "J2_raw": {
+   "TA": 0.8125,
+   "FA": 0.0625,
+   "escalatedCompliant": 0.0,
+   "escalatedViolating": 0.0,
+   "crossRun": false
+  },
+  "J2_block": {
+   "TA": 0.0,
+   "FA": 0.0,
+   "escalatedCompliant": 0.0,
+   "escalatedViolating": 0.0,
+   "crossRun": false
+  },
+  "J2_escalate": {
+   "TA": 0.0,
+   "FA": 0.0,
+   "escalatedCompliant": 1.0,
+   "escalatedViolating": 1.0,
+   "crossRun": false
+  },
+  "J2_strip": {
+   "TA": 0.875,
+   "FA": 0.0,
+   "escalatedCompliant": 0.0,
+   "escalatedViolating": 0.0,
+   "crossRun": true
+  },
+  "J2_detectThenR": {
+   "TA": 0.859375,
+   "FA": 0.0,
+   "escalatedCompliant": 0.0,
+   "escalatedViolating": 0.0,
+   "crossRun": false
+  },
+  "J2_regexThenR": {
+   "TA": 0.859375,
+   "FA": 0.0,
+   "escalatedCompliant": 0.0,
+   "escalatedViolating": 0.0,
+   "crossRun": false
+  },
+  "J2b_raw": {
+   "TA": 0.90625,
+   "FA": 0.921875,
+   "escalatedCompliant": 0.0,
+   "escalatedViolating": 0.0,
+   "crossRun": true
+  },
+  "J2b_block": {
+   "TA": 0.0,
+   "FA": 0.0,
+   "escalatedCompliant": 0.0,
+   "escalatedViolating": 0.0,
+   "crossRun": true
+  },
+  "J2b_escalate": {
+   "TA": 0.0,
+   "FA": 0.0,
+   "escalatedCompliant": 1.0,
+   "escalatedViolating": 1.0,
+   "crossRun": true
+  },
+  "J2b_strip": {
+   "TA": 0.875,
+   "FA": 0.0,
+   "escalatedCompliant": 0.0,
+   "escalatedViolating": 0.0,
+   "crossRun": true
+  },
+  "J2b_detectThenR": {
+   "TA": 0.859375,
+   "FA": 0.0,
+   "escalatedCompliant": 0.0,
+   "escalatedViolating": 0.0,
+   "crossRun": true
+  },
+  "J2b_regexThenR": {
+   "TA": 0.859375,
+   "FA": 0.0,
+   "escalatedCompliant": 0.0,
+   "escalatedViolating": 0.0,
+   "crossRun": true
+  }
+ },
+ "pipelinesNote": "descriptive; cross-run entries mix the frozen v1.1 run and are EXPLORATORY if drift fails",
+ "drift": {
+  "J2": {
+   "items": 128,
+   "agreement": 0.875
+  },
+  "R": {
+   "items": 128,
+   "agreement": 0.9765625
+  },
+  "versionRecord": {
+   "model": "openai/gpt-oss-20b",
+   "v11Run": "../v1.1/results/test-gptoss-001",
+   "v11Model": "openai/gpt-oss-20b",
+   "v11StartedAt": "2026-11-15T17:40:57.402Z",
+   "v11OllamaVersion": "0.40.16",
+   "recordedAt": "2026-11-17T12:57:09.124223",
+   "server": "lmstudio",
+   "serverVersion": {
+    "app": "0.4.26+4",
+    "cli": "CLI commit: dcefd5a"
+   },
+   "lmsModel": {
+    "type": "llm",
+    "modelKey": "openai/gpt-oss-20b",
+    "format": "safetensors",
+    "displayName": "GPT-OSS 20B",
+    "publisher": "openai",
+    "path": "openai/gpt-oss-20b",
+    "sizeBytes": 12104314420,
+    "indexedModelIdentifier": "openai/gpt-oss-20b",
+    "deviceIdentifier": null,
+    "paramsString": "20B",
+    "architecture": "gpt_oss",
+    "quantization": {
+     "name": "MXFP4",
+     "bits": 4
+    },
+    "variants": [
+     "openai/gpt-oss-20b@mxfp4"
+    ],
+    "selectedVariant": "openai/gpt-oss-20b@mxfp4",
+    "vision": false,
+    "trainedForToolUse": true,
+    "maxContextLength": 131072
+   },
+   "modelFile": {
+    "path": "/Users/admin/.lmstudio/hub/models/openai/gpt-oss-20b",
+    "mtime": "2026-10-11T10:12:12.884399",
+    "sha256": null,
+    "olderThanV11Start": true
+   },
+   "versionMatchesV11": null
+  },
+  "pass": false
+ },
+ "systemFailures": 0,
+ "unparsed": 0,
+ "finishLength": 0
+}

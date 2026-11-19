@@ -1,0 +1,30 @@
+{
+ "schema": "p923-run-v1.2",
+ "model": "ollama:qwen3:8b+think",
+ "conds": [
+  "J0",
+  "J2",
+  "J2a",
+  "J2b",
+  "J2c",
+  "R",
+  "J2R",
+  "J2P",
+  "J2bP",
+  "J2SP",
+  "J2bSP"
+ ],
+ "runtime": {
+  "server": "ollama",
+  "options": {
+   "temperature": 0,
+   "num_ctx": 16384
+  }
+ },
+ "maxTokens": 4096,
+ "datasetSha256": "c128c5704826086e86f2fb0bef5310d98b39a2697537aca9ad52b95a0d37c255",
+ "split": "f11",
+ "sourceSha256": "673ebbaf088ffd4aea10bcd0c9de0d704c0e96a12f9704bd2c87a40686cd0e7c",
+ "startedAt": "2026-11-16T22:40:26.482Z",
+ "freeze": "freeze-v1.2"
+}

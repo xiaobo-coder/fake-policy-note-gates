@@ -1,0 +1,5 @@
+out/
+paper-draft-001/generated/
+__pycache__/
+*.pyc
+.DS_Store

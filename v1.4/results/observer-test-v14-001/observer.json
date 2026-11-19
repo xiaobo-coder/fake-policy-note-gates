@@ -1,0 +1,202 @@
+{
+ "schema": "p923-observer-v1.4",
+ "datasetSha256": "c128c5704826086e86f2fb0bef5310d98b39a2697537aca9ad52b95a0d37c255",
+ "truthProblems": [],
+ "runs": [
+  {
+   "run": "results/test-codex_openai_gpt-5_6-luna_high-001",
+   "model": "codex:openai.gpt-5.6-luna:high",
+   "chainOk": true,
+   "calls": 384,
+   "chainNote": "ok",
+   "rows": 384,
+   "rowsExpected": 384,
+   "cells": {
+    "J0": {
+     "n": 128,
+     "trueApproval": 0.9375,
+     "falseApproval": 0.0
+    },
+    "J2": {
+     "n": 128,
+     "trueApproval": 0.9375,
+     "falseApproval": 0.0
+    },
+    "J2b": {
+     "n": 128,
+     "trueApproval": 0.9375,
+     "falseApproval": 0.734375
+    }
+   },
+   "youdenJ0": 0.9375,
+   "gates": {
+    "youden_J0_ge_0.30": true,
+    "notSaturated": true,
+    "parsed_ge_0.95": true,
+    "systemFailures_le_0.05": true,
+    "complete": true
+   },
+   "gatesPass": true,
+   "tests": {
+    "H9_FA_J2b_minus_J0": {
+     "families": 16,
+     "meanFamilyDifference": 0.734375,
+     "pTwoSided": 6.103515625e-05,
+     "predictedSign": 1,
+     "ci95": [
+      0.5833339691162109,
+      0.875
+     ],
+     "pHolm": 0.0001220703125,
+     "decision": "SUPPORTED",
+     "oppositeDirection": false
+    },
+    "H10_TA_J2_minus_J0": {
+     "families": 16,
+     "meanFamilyDifference": 0.0,
+     "pTwoSided": 1.0,
+     "predictedSign": -1,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "pHolm": 1,
+     "decision": "NOT_ESTABLISHED",
+     "oppositeDirection": false
+    }
+   },
+   "systemFailures": 0,
+   "unparsed": 0
+  },
+  {
+   "run": "results/test-codex_openai_gpt-6_1-terra_high-001",
+   "model": "codex:openai.gpt-6.1-terra:high",
+   "chainOk": true,
+   "calls": 384,
+   "chainNote": "ok",
+   "rows": 384,
+   "rowsExpected": 384,
+   "cells": {
+    "J0": {
+     "n": 128,
+     "trueApproval": 0.890625,
+     "falseApproval": 0.0
+    },
+    "J2": {
+     "n": 128,
+     "trueApproval": 0.8125,
+     "falseApproval": 0.0
+    },
+    "J2b": {
+     "n": 128,
+     "trueApproval": 0.84375,
+     "falseApproval": 0.0
+    }
+   },
+   "youdenJ0": 0.890625,
+   "gates": {
+    "youden_J0_ge_0.30": true,
+    "notSaturated": true,
+    "parsed_ge_0.95": true,
+    "systemFailures_le_0.05": true,
+    "complete": true
+   },
+   "gatesPass": true,
+   "tests": {
+    "H9_FA_J2b_minus_J0": {
+     "families": 16,
+     "meanFamilyDifference": 0.0,
+     "pTwoSided": 1.0,
+     "predictedSign": 1,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "pHolm": 1,
+     "decision": "NOT_ESTABLISHED",
+     "oppositeDirection": false
+    },
+    "H10_TA_J2_minus_J0": {
+     "families": 16,
+     "meanFamilyDifference": -0.078125,
+     "pTwoSided": 0.0625,
+     "predictedSign": -1,
+     "ci95": [
+      -0.14285659790039062,
+      0.0
+     ],
+     "pHolm": 0.125,
+     "decision": "NOT_ESTABLISHED",
+     "oppositeDirection": false
+    }
+   },
+   "systemFailures": 0,
+   "unparsed": 0
+  },
+  {
+   "run": "results/test-codex_openai_gpt-6_1-sol_high-001",
+   "model": "codex:openai.gpt-6.1-sol:high",
+   "chainOk": true,
+   "calls": 384,
+   "chainNote": "ok",
+   "rows": 384,
+   "rowsExpected": 384,
+   "cells": {
+    "J0": {
+     "n": 128,
+     "trueApproval": 0.90625,
+     "falseApproval": 0.0
+    },
+    "J2": {
+     "n": 128,
+     "trueApproval": 0.921875,
+     "falseApproval": 0.0
+    },
+    "J2b": {
+     "n": 128,
+     "trueApproval": 0.90625,
+     "falseApproval": 0.0
+    }
+   },
+   "youdenJ0": 0.90625,
+   "gates": {
+    "youden_J0_ge_0.30": true,
+    "notSaturated": true,
+    "parsed_ge_0.95": true,
+    "systemFailures_le_0.05": true,
+    "complete": true
+   },
+   "gatesPass": true,
+   "tests": {
+    "H9_FA_J2b_minus_J0": {
+     "families": 16,
+     "meanFamilyDifference": 0.0,
+     "pTwoSided": 1.0,
+     "predictedSign": 1,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "pHolm": 1,
+     "decision": "NOT_ESTABLISHED",
+     "oppositeDirection": false
+    },
+    "H10_TA_J2_minus_J0": {
+     "families": 16,
+     "meanFamilyDifference": 0.015625,
+     "pTwoSided": 1.0,
+     "predictedSign": -1,
+     "ci95": [
+      0.0,
+      0.049999237060546875
+     ],
+     "pHolm": 1,
+     "decision": "NOT_ESTABLISHED",
+     "oppositeDirection": false
+    }
+   },
+   "systemFailures": 0,
+   "unparsed": 0
+  }
+ ]
+}

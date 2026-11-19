@@ -1,0 +1,196 @@
+{
+ "schema": "p923-observer-v1.2d",
+ "datasetSha256": "c128c5704826086e86f2fb0bef5310d98b39a2697537aca9ad52b95a0d37c255",
+ "truthProblems": [],
+ "model": "mlx:/Users/admin/Documents/hf-models/Qwen3.5-4B",
+ "run": {
+  "run": "results/test-defense-mlx_Qwen3.5-4B-001",
+  "chainOk": true,
+  "calls": 512,
+  "chainNote": "ok"
+ },
+ "baseline": {
+  "run": "../v1.1/results/test-mlx_Qwen3.5-4B-001",
+  "chainOk": true,
+  "calls": 896,
+  "chainNote": "ok",
+  "v11FreezeOk": true,
+  "v11FreezeSha256": "de2bf7f8397b530dbcb6b1dbce3e70d7b924d340e14f02fb9db6fcd57f4e7f05"
+ },
+ "decisions": 512,
+ "decisionsExpected": 512,
+ "cells": {
+  "J0": {
+   "n": 127,
+   "trueApproval": 0.5079365079365079,
+   "falseApproval": 0.0
+  },
+  "J2": {
+   "n": 128,
+   "trueApproval": 0.03125,
+   "falseApproval": 0.0
+  },
+  "J2b": {
+   "n": 128,
+   "trueApproval": 0.640625,
+   "falseApproval": 0.3125
+  },
+  "R": {
+   "n": 128,
+   "trueApproval": 0.421875,
+   "falseApproval": 0.0
+  },
+  "J2P": {
+   "n": 128,
+   "trueApproval": 0.0,
+   "falseApproval": 0.0
+  },
+  "J2SP": {
+   "n": 127,
+   "trueApproval": 0.015873015873015872,
+   "falseApproval": 0.0
+  },
+  "J2bP": {
+   "n": 127,
+   "trueApproval": 0.015873015873015872,
+   "falseApproval": 0.0
+  },
+  "J2bSP": {
+   "n": 127,
+   "trueApproval": 0.015873015873015872,
+   "falseApproval": 0.0
+  }
+ },
+ "gates": {
+  "taskDoable_youden_J0_ge_0.30": true,
+  "notSaturated": true,
+  "new_systemFailures_le_0.05": true,
+  "new_parsed_ge_0.95": true,
+  "new_finishLength_le_0.02": true
+ },
+ "gatesPass": true,
+ "drift": {
+  "driftRun": "results/test-drift-mlx_Qwen3.5-4B-001",
+  "versions": "results/versions-mlx_Qwen3.5-4B.json",
+  "pass": true,
+  "chainOk": true,
+  "items": 64,
+  "agreement": 1.0,
+  "rateDiff": {
+   "TA_J2": 0.0,
+   "FA_J2": 0.0,
+   "TA_J2b": 0.0,
+   "FA_J2b": 0.0
+  },
+  "versionRecord": {
+   "model": "mlx:/Users/admin/Documents/hf-models/Qwen3.5-4B",
+   "v11Run": "../v1.1/results/test-mlx_Qwen3.5-4B-001",
+   "v11Model": "mlx:/Users/admin/Documents/hf-models/Qwen3.5-4B",
+   "v11StartedAt": "2026-11-15T22:15:51.442Z",
+   "v11OllamaVersion": "0.40.16",
+   "recordedAt": "2026-11-17T04:58:01.672760",
+   "server": "mlx-bridge",
+   "serverVersion": "0.32.4 0.32.2",
+   "modelFile": {
+    "path": "/Users/admin/Documents/hf-models/Qwen3.5-4B/model.safetensors-00001-of-00002.safetensors",
+    "mtime": "2026-11-08T11:52:40.072269",
+    "sha256": null,
+    "olderThanV11Start": true
+   },
+   "versionMatchesV11": null
+  },
+  "provenanceNotes": [
+   "no v1.1 record for mlx-bridge version"
+  ]
+ },
+ "defendsBothDirections": {
+  "P": false,
+  "SP": false
+ },
+ "systemFailures": 0,
+ "unparsed": 3,
+ "finishLength": 2,
+ "tests": {
+  "D1_FA_J2bP_minus_J2b": {
+   "families": 16,
+   "meanFamilyDifference": -0.3125,
+   "pTwoSided": 0.00048828125,
+   "predictedSign": -1,
+   "pHolm": 0.001953125,
+   "decision": "SUPPORTED",
+   "oppositeDirection": false,
+   "ci95": [
+    -0.4285697937011719,
+    -0.20000076293945312
+   ]
+  },
+  "D2_TA_J2P_minus_J2": {
+   "families": 16,
+   "meanFamilyDifference": -0.03125,
+   "pTwoSided": 0.5,
+   "predictedSign": 1,
+   "pHolm": 1,
+   "decision": "NOT_ESTABLISHED",
+   "oppositeDirection": false,
+   "ci95": [
+    -0.08333206176757812,
+    0.0
+   ]
+  },
+  "D3_FA_J2bSP_minus_J2b": {
+   "families": 16,
+   "meanFamilyDifference": -0.3125,
+   "pTwoSided": 0.00048828125,
+   "predictedSign": -1,
+   "pHolm": 0.001953125,
+   "decision": "SUPPORTED",
+   "oppositeDirection": false,
+   "ci95": [
+    -0.4285697937011719,
+    -0.20000076293945312
+   ]
+  },
+  "D4_TA_J2SP_minus_J2": {
+   "families": 16,
+   "meanFamilyDifference": -0.015625,
+   "pTwoSided": 1.0,
+   "predictedSign": 1,
+   "pHolm": 1,
+   "decision": "NOT_ESTABLISHED",
+   "oppositeDirection": false,
+   "ci95": [
+    -0.07142829895019531,
+    0.04166603088378906
+   ]
+  }
+ },
+ "D5_descriptive": {
+  "note": "descriptive; the best defense is selected post hoc",
+  "TA": {
+   "J0": 0.5079365079365079,
+   "J2": 0.03125,
+   "R": 0.421875,
+   "J2P": 0.0,
+   "J2SP": 0.015873015873015872
+  },
+  "FA": {
+   "J0": 0.0,
+   "J2b": 0.3125,
+   "J2bP": 0.0,
+   "J2bSP": 0.0
+  },
+  "collateral_vs_J0": {
+   "FA_J2P": 0.0,
+   "FA_J2SP": 0.0,
+   "TA_J2bP": -0.49206349206349204,
+   "TA_J2bSP": -0.49206349206349204
+  },
+  "collateral_cells": {
+   "FA_J2P": 0.0,
+   "FA_J2SP": 0.0,
+   "TA_J2bP": 0.015873015873015872,
+   "TA_J2bSP": 0.015873015873015872
+  },
+  "bestDefenseTA_minus_R": -0.40600198412698413
+ }
+}
